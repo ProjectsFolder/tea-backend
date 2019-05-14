@@ -1,6 +1,3 @@
-post:
-  label: Посты
-
 menu:
   blog: Блог
   posts: Посты
@@ -19,10 +16,39 @@ action:
   save: Сохранить
   list: Вернуться к списку
 
+label:
+  form:
+    empty_value: Выберите...
+
 tag:
   list_header: Теги
-  form_header: Создать новый тег
-  show_header: Тег
+  show_header: Тег (#%entity_id%)
   id: ID
   name: Название
   posts: Посты
+
+post:
+  list_header: Посты
+  show_header: Пост (#%entity_id%)
+  id: ID
+  title: Заголовок
+  content: Содержание
+  time_created: Время создания
+  time_modified: Время обновления
+  tags: Тэги
+
+category:
+  list_header: Категории
+  show_header: Категория (#%entity_id%)
+  id: ID
+  name: Название
+  parent: Родительская категория
+  sub_categories: Подкатегории
+
+article:
+  list_header: Статьи
+  show_header: Статья (#%entity_id%)
+  id: ID
+  title: Заголовок
+  content: Содержание
+  category: Категория

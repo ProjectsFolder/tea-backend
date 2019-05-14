@@ -1,8 +1,26 @@
 easy_admin:
   entities:
     Post:
-      #disabled_actions: ['delete']
       class: 'App\Entity\Post'
+      label: Пост
       list:
         actions: ['show']
+        title: post.list_header
+        fields:
+          - { property: 'id', label: 'post.id' }
+          - { property: 'title', label: 'post.title' }
+          - { property: 'timeCreated', label: 'post.time_created' }
+          - { property: 'timeModified', label: 'post.time_modified' }
       show:
+        title: post.show_header
+        fields:
+          - { property: 'id', label: 'post.id' }
+          - { property: 'title', label: 'post.title' }
+          - { property: 'content', label: 'post.content' }
+          - { property: 'tags', label: 'post.tags' }
+          - { property: 'timeCreated', label: 'post.time_created' }
+          - { property: 'timeModified', label: 'post.time_modified' }
+      form:
+        fields:
+          - { property: 'title',  type_options: { required: true, label: 'post.title' } }
+          - { property: 'content',  type_options: { required: true, label: 'post.content' } }

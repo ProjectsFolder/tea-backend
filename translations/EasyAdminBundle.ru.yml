@@ -1,2 +1,11 @@
 paginator:
   results: "{0} Нет результатов|[1,Inf] <strong>%count%</strong> записей найдено"
+
+new:
+  page_title: Создать "%entity_label%"
+
+edit:
+  page_title: "%entity_label% (#%entity_id%)"
+#
+#list:
+#  page_title: Редактировать объект "%entity_label% (#%entity_id%)"

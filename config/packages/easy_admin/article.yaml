@@ -1,8 +1,24 @@
 easy_admin:
   entities:
     Article:
-      #disabled_actions: ['delete']
       class: 'App\Entity\Article'
+      label: Статья
       list:
         actions: ['show']
+        title: article.list_header
+        fields:
+          - { property: 'id', label: 'article.id' }
+          - { property: 'title', label: 'article.title' }
+          - { property: 'category', label: 'article.category' }
       show:
+        title: article.show_header
+        fields:
+          - { property: 'id', label: 'article.id' }
+          - { property: 'title', label: 'article.title' }
+          - { property: 'content', label: 'article.content' }
+          - { property: 'category', label: 'article.category' }
+      form:
+        fields:
+          - { property: 'title',  type_options: { required: true, label: 'article.title' } }
+          - { property: 'content',  type_options: { required: true, label: 'article.content' } }
+          - { property: 'category',  type_options: { required: true, label: 'article.category' } }

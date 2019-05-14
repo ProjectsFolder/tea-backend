@@ -1,8 +1,8 @@
 easy_admin:
   entities:
     Tag:
-      #disabled_actions: ['delete']
       class: 'App\Entity\Tag'
+      label: Тег
       list:
         actions: ['show']
         title: tag.list_header
@@ -16,6 +16,5 @@ easy_admin:
           - { property: 'name', label: 'tag.name' }
           - { property: 'posts', label: 'tag.posts' }
       form:
-        title: tag.form_header
         fields:
           - { property: 'name',  type_options: { required: true, label: 'tag.name' } }

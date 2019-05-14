@@ -1,8 +1,23 @@
 easy_admin:
   entities:
     Category:
-      #disabled_actions: ['delete']
       class: 'App\Entity\Category'
+      label: Категория
       list:
         actions: ['show']
+        title: category.list_header
+        fields:
+          - { property: 'id', label: 'category.id' }
+          - { property: 'name', label: 'category.name' }
+          - { property: 'parent', label: 'category.parent' }
       show:
+        title: category.show_header
+        fields:
+          - { property: 'id', label: 'category.id' }
+          - { property: 'name', label: 'category.name' }
+          - { property: 'parent', label: 'category.parent' }
+          - { property: 'subCategories', label: 'category.sub_categories' }
+      form:
+        fields:
+          - { property: 'name',  type_options: { required: true, label: 'category.name' } }
+          - { property: 'parent',  type_options: { required: false, label: 'category.parent' } }
