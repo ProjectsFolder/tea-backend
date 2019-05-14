@@ -1,0 +1,18 @@
+post:
+  label: Посты
+
+menu:
+  blog: Блог
+  posts: Посты
+  tags: Тэги
+  enc: Энциклопедия
+  categories: Категории
+  articles: Статьи
+
+action:
+  new: Создать
+  delete: Удалить
+  edit: Редактировать
+  show: Просмотр
+  search: Поиск
+  cancel: Отменить

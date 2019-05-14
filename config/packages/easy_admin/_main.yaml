@@ -1,0 +1,19 @@
+imports:
+
+easy_admin:
+  site_name: 'Чайная Башня'
+  translation_domain: 'admin'
+
+  list:
+    max_results: 20
+  design:
+    brand_color: 'rgba(26, 188, 156, 0.85)'
+    menu:
+      - label: 'menu.blog'
+        children:
+          - { label: 'menu.posts', entity: 'Post' }
+          - { label: 'menu.tags', entity: 'Tag' }
+      - label: 'menu.enc'
+        children:
+          - { label: 'menu.articles', entity: 'Article' }
+          - { label: 'menu.categories', entity: 'Category' }

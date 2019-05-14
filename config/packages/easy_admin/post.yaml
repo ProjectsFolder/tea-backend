@@ -1,0 +1,8 @@
+easy_admin:
+  entities:
+    Post:
+      #disabled_actions: ['delete']
+      class: 'App\Entity\Post'
+      list:
+        actions: ['show']
+      show:

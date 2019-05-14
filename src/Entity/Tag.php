@@ -26,18 +26,14 @@ class Tag
     private $name;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Tag", inversedBy="children")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Post", mappedBy="tags")
      */
-    private $parent;
-
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Tag", mappedBy="parent")
-     */
-    private $children;
+    private $posts;
 
     public function __construct()
     {
         $this->children = new ArrayCollection();
+        $this->posts = new ArrayCollection();
     }
 
     public function __toString()
@@ -62,44 +58,29 @@ class Tag
         return $this;
     }
 
-    public function getParent(): ?self
-    {
-        return $this->parent;
-    }
-
-    public function setParent(?self $parent): self
-    {
-        $this->parent = $parent;
-
-        return $this;
-    }
-
     /**
-     * @return Collection|self[]
+     * @return Collection|Post[]
      */
-    public function getChildren(): Collection
+    public function getPosts(): Collection
     {
-        return $this->children;
+        return $this->posts;
     }
 
-    public function addChild(self $child): self
+    public function addPost(Post $post): self
     {
-        if (!$this->children->contains($child)) {
-            $this->children[] = $child;
-            $child->setParent($this);
+        if (!$this->posts->contains($post)) {
+            $this->posts[] = $post;
+            $post->addTag($this);
         }
 
         return $this;
     }
 
-    public function removeChild(self $child): self
+    public function removePost(Post $post): self
     {
-        if ($this->children->contains($child)) {
-            $this->children->removeElement($child);
-            // set the owning side to null (unless already changed)
-            if ($child->getParent() === $this) {
-                $child->setParent(null);
-            }
+        if ($this->posts->contains($post)) {
+            $this->posts->removeElement($post);
+            $post->removeTag($this);
         }
 
         return $this;

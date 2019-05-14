@@ -1,0 +1,8 @@
+easy_admin:
+  entities:
+    Tag:
+      #disabled_actions: ['delete']
+      class: 'App\Entity\Tag'
+      list:
+        actions: ['show']
+      show:
