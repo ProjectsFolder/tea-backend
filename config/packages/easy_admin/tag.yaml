@@ -5,4 +5,17 @@ easy_admin:
       class: 'App\Entity\Tag'
       list:
         actions: ['show']
+        title: tag.list_header
+        fields:
+          - { property: 'id', label: 'tag.id'}
+          - { property: 'name', label: 'tag.name'}
       show:
+        title: tag.show_header
+        fields:
+          - { property: 'id', label: 'tag.id' }
+          - { property: 'name', label: 'tag.name' }
+          - { property: 'posts', label: 'tag.posts' }
+      form:
+        title: tag.form_header
+        fields:
+          - { property: 'name',  type_options: { required: true, label: 'tag.name' } }

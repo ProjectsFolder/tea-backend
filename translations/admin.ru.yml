@@ -4,7 +4,7 @@ post:
 menu:
   blog: Блог
   posts: Посты
-  tags: Тэги
+  tags: Теги
   enc: Энциклопедия
   categories: Категории
   articles: Статьи
@@ -16,3 +16,13 @@ action:
   show: Просмотр
   search: Поиск
   cancel: Отменить
+  save: Сохранить
+  list: Вернуться к списку
+
+tag:
+  list_header: Теги
+  form_header: Создать новый тег
+  show_header: Тег
+  id: ID
+  name: Название
+  posts: Посты
