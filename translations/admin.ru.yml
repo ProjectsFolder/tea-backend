@@ -20,6 +20,7 @@ label:
   form:
     empty_value: Выберите...
 
+Tag: Тег
 tag:
   entity_label: Тег
   list_header: Теги
@@ -28,6 +29,7 @@ tag:
   name: Название
   posts: Посты
 
+Post: Пост
 post:
   entity_label: Пост
   list_header: Посты
@@ -39,6 +41,7 @@ post:
   time_modified: Время обновления
   tags: Тэги
 
+Category: Категория
 category:
   entity_label: Категория
   list_header: Категории
@@ -48,6 +51,7 @@ category:
   parent: Родительская категория
   sub_categories: Подкатегории
 
+Article: Статья
 article:
   entity_label: Статья
   list_header: Статьи
