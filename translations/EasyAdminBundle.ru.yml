@@ -6,6 +6,3 @@ new:
 
 edit:
   page_title: "%entity_label% (#%entity_id%)"
-#
-#list:
-#  page_title: Редактировать объект "%entity_label% (#%entity_id%)"
