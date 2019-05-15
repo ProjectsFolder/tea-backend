@@ -21,6 +21,7 @@ label:
     empty_value: Выберите...
 
 tag:
+  label: Тег
   list_header: Теги
   show_header: Тег (#%entity_id%)
   id: ID
@@ -28,6 +29,7 @@ tag:
   posts: Посты
 
 post:
+  label: Пост
   list_header: Посты
   show_header: Пост (#%entity_id%)
   id: ID
@@ -38,6 +40,7 @@ post:
   tags: Тэги
 
 category:
+  label: Категория
   list_header: Категории
   show_header: Категория (#%entity_id%)
   id: ID
@@ -46,6 +49,7 @@ category:
   sub_categories: Подкатегории
 
 article:
+  label: Статья
   list_header: Статьи
   show_header: Статья (#%entity_id%)
   id: ID

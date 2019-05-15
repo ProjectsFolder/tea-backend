@@ -2,7 +2,7 @@ easy_admin:
   entities:
     Tag:
       class: 'App\Entity\Tag'
-      label: Тег
+      label: tag.label
       list:
         actions: ['show']
         title: tag.list_header

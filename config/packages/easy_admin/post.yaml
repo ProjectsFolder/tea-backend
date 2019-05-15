@@ -2,7 +2,7 @@ easy_admin:
   entities:
     Post:
       class: 'App\Entity\Post'
-      label: Пост
+      label: post.label
       list:
         actions: ['show']
         title: post.list_header

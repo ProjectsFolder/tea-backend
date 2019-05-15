@@ -2,7 +2,7 @@ easy_admin:
   entities:
     Category:
       class: 'App\Entity\Category'
-      label: Категория
+      label: category.label
       list:
         actions: ['show']
         title: category.list_header
