@@ -2,7 +2,7 @@ easy_admin:
   entities:
     Article:
       class: 'App\Entity\Article'
-      label: article.label
+      label: article.entity_label
       list:
         actions: ['show']
         title: article.list_header
